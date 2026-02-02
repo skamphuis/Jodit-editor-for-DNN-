@@ -1,0 +1,57 @@
+﻿Jodit HTML Editor Provider for DNN
+Version 1.0.0
+
+RELEASE NOTES
+=============
+
+Version 1.0.0 (Initial Release)
+--------------------------------
+Release Date: January 2026
+
+FEATURES:
+- Jodit WYSIWYG HTML editor integration for DNN Platform
+- MIT-licensed open source editor
+- Full WYSIWYG editing capabilities
+- Source code editing mode
+- Responsive toolbar
+- Image handling support
+- Table support
+- Link management
+- Multiple language support
+- Clean HTML output
+- Mobile-friendly interface
+
+SYSTEM REQUIREMENTS:
+- DNN Platform 9.0 or higher
+- .NET Framework 4.8
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+
+INSTALLATION:
+1. Install through DNN Host > Extensions > Install Extension Wizard
+2. Upload the installation package
+3. Follow the installation wizard
+4. Configure in Host > Host Settings > Other Settings > HTML Editor Manager
+
+CONFIGURATION:
+- Access settings through DNN's HTML Editor Manager
+- Configure default height, toolbar options, and editor behavior
+- Set as default editor for your portal or specific modules
+
+KNOWN ISSUES:
+- Image upload handler not yet implemented (images can be added via URL)
+- File browser not yet implemented
+- Some advanced Jodit features may require additional configuration
+
+FUTURE ENHANCEMENTS:
+- Image upload functionality
+- File browser integration
+- Advanced toolbar configuration options
+- Role-based editor configurations
+- Custom plugin support
+
+SUPPORT:
+For issues, questions, or feature requests, please contact [your support channel]
+
+LICENSE:
+This provider is released under the MIT License. See License.txt for details.
+Jodit editor is also MIT licensed. See https://github.com/xdan/jodit

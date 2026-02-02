@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dotnetnuke type="Package" version="9.0">
+  <packages>
+    <package name="DNNConnect.JoditEditorProvider" type="Provider" version="1.0.0">
+      <friendlyName>Jodit HTML Editor Provider</friendlyName>
+      <description>A Jodit WYSIWYG HTML Editor Provider for DNN Platform</description>
+      <iconFile>~/Providers/HtmlEditorProviders/Jodit/Images/jodit-icon.png</iconFile>
+      <owner>
+        <name>Your Name</name>
+        <organization>Your Organization</organization>
+        <url>https://yourwebsite.com</url>
+        <email>your@email.com</email>
+      </owner>
+      <license src="License.txt" />
+      <releaseNotes src="ReleaseNotes.txt" />
+      <azureCompatible>true</azureCompatible>
+      <dependencies>
+        <dependency type="CoreVersion">09.00.00</dependency>
+      </dependencies>
+      <components>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+              <path>bin</path>
+              <name>DNNConnect.JoditEditorProvider.dll</name>
+            </assembly>
+          </assemblies>
+        </component>
+
+        <component type="File">
+          <files>
+            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
+            <file>
+              <path>Controls</path>
+              <name>JoditEditorOptions.ascx</name>
+            </file>
+          </files>
+        </component>
+
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
+            <resourceFile>
+              <name>Resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+
+        <component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/dotnetnuke/htmlEditor/providers" action="update" key="name" collision="overwrite">
+                    <add name="JoditEditorProvider"
+                         type="DNNConnect.CKE.JoditHtmlEditorProvider, DNNConnect.JoditEditorProvider"
+                         providerPath="~/Providers/HtmlEditorProviders/Jodit/"
+                         settingsControlPath="~/Providers/HtmlEditorProviders/Jodit/Controls/JoditEditorOptions.ascx" />
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+            <uninstall>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/dotnetnuke/htmlEditor/providers/add[@name='JoditEditorProvider']" action="remove" />
+                </nodes>
+              </configuration>
+            </uninstall>
+          </config>
+        </component>
+
+        <component type="Cleanup" version="1.0.0">
+          <files>
+            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
+          </files>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
