@@ -105,6 +105,13 @@
     <None Include="DNNConnect.JoditEditorProvider.dnn" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <PropertyGroup>
+    <Extension>zip</Extension>
+    <DNNFileName>DNNConnect.JoditEditorProvider</DNNFileName>
+    <PackageName>DNNConnect.JoditEditorProvider</PackageName>
+  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="BuildScripts\ProviderPackage.Targets" />
+  <Target Name="AfterBuild" DependsOnTargets="PackageAndDeploy">
+  </Target>
 </Project>

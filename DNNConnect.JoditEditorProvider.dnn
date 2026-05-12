@@ -4,12 +4,12 @@
     <package name="DNNConnect.JoditEditorProvider" type="Provider" version="1.0.0">
       <friendlyName>Jodit HTML Editor Provider</friendlyName>
       <description>A Jodit WYSIWYG HTML Editor Provider for DNN Platform</description>
-      <iconFile>~/Providers/HtmlEditorProviders/Jodit/Images/jodit-icon.png</iconFile>
+      <iconFile>~/Providers/HtmlEditorProviders/DNNConnect.Jodit/Images/jodit-icon.png</iconFile>
       <owner>
-        <name>Your Name</name>
-        <organization>Your Organization</organization>
-        <url>https://yourwebsite.com</url>
-        <email>your@email.com</email>
+        <name>Tycho</name>
+        <organization>Tjeps</organization>
+        <url>https://www.tjeps.com</url>
+        <email>info@tjeps.com</email>
       </owner>
       <license src="License.txt" />
       <releaseNotes src="ReleaseNotes.txt" />
@@ -27,19 +27,9 @@
           </assemblies>
         </component>
 
-        <component type="File">
-          <files>
-            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
-            <file>
-              <path>Controls</path>
-              <name>JoditEditorOptions.ascx</name>
-            </file>
-          </files>
-        </component>
-
         <component type="ResourceFile">
           <resourceFiles>
-            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
+            <basePath>Providers\HtmlEditorProviders\DNNConnect.Jodit</basePath>
             <resourceFile>
               <name>Resources.zip</name>
             </resourceFile>
@@ -56,7 +46,7 @@
                     <add name="JoditEditorProvider"
                          type="DNNConnect.CKE.JoditHtmlEditorProvider, DNNConnect.JoditEditorProvider"
                          providerPath="~/Providers/HtmlEditorProviders/Jodit/"
-                         settingsControlPath="~/Providers/HtmlEditorProviders/Jodit/Controls/JoditEditorOptions.ascx" />
+                         settingsControlPath="~/Providers/HtmlEditorProviders/DNNConnect.Jodit/Controls/JoditEditorOptions.ascx" />
                   </node>
                 </nodes>
               </configuration>
@@ -73,7 +63,7 @@
 
         <component type="Cleanup" version="1.0.0">
           <files>
-            <basePath>Providers\HtmlEditorProviders\Jodit</basePath>
+            <basePath>Providers\HtmlEditorProviders\DNNConnect.Jodit</basePath>
           </files>
         </component>
       </components>
